@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'me.june'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = '17'
 
 configurations {
@@ -32,4 +32,10 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+// bootJar 빌드 설정
+tasks.bootJar {
+    archiveFileName = "server.jar"
+    destinationDirectory = file(project.rootDir)
 }
